@@ -1,0 +1,53 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OMSI Configuration File",
+	"patterns": [
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"include": "#begin-end-keywords"
+				},
+				{
+					"include": "#fixed-length-keywords"
+				},
+				{
+					"name": "keyword.other.omsi.cfg",
+					"match": "^{noticketsale}\\s*$"
+				}
+			]
+		},
+		"begin-end-keywords": {
+			"name": "meta.tag.end.omsi.cfg",
+			"begin": "^(\\[(description|aigroup_2|aigroup_depot_typgroup|aigroup_depot_typgroup_2)\\])$",
+			"end": "(^\\[end\\]\\s*$)",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.tag.omsi.cfg"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "entity.name.tag.omsi.cfg"
+				}
+			},
+			"comment": "These keywords must be terminated with and [end] tag"
+		},
+		"fixed-length-keywords": {
+			"name": "meta.tag.std.omsi.cfg",
+			"begin": "^(\\[(?!end)\\w+\\])\\s*$",
+			"end": "^\\s*$",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.tag.omsi.cfg"
+				}
+			},
+			"comment": "Keywords must have no leading or trailing characters"
+		}
+	},
+	"scopeName": "source.omsi.cfg"
+}

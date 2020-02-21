@@ -1,0 +1,63 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OMSI Depot File",
+	"patterns": [
+		{
+			"include": "#keywords"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"include": "#fixed-length-keywords"
+				},
+				{
+					"include": "#parameter"
+				}
+			]
+		},
+		"fixed-length-keywords": {
+			"name": "meta.tag.end.omsi.cfg.hof",
+			"begin": "^(\\[(?=addterminus_list|addbusstop_list)\\w+\\])\\s*$",
+			"end": "(^\\[end\\]\\s*$)",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.section.keyword.omsi.cfg"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "entity.name.section.keyword.omsi.cfg"
+				}
+			},
+			"patterns": [
+				{
+					"name" : "constant.numeric.zielcode.omsi.cfg.hof",
+        			"match" : "^(?:\\t|(?:{ALLEX}\\t))(\\d+)"
+				},
+				{
+					"name" : "constant.other.busstop.omsi.cfg.hof",
+					"match" : "^\\w+"
+				}
+			],
+			"comment": "Keywords must have no leading or trailing characters"
+		},
+		"parameter": {
+			"name": "meta.parameter.omsi.cfg",
+			"begin": "^(stringcount_terminus|stringcount_busstop)",
+			"end": "^(\\d*)",
+			"beginCaptures": {
+				"1": {
+					"name": "keyword.parameter.omsi.cfg"
+				}
+			},
+			"endCaptures": {
+				"1": {
+					"name": "constant.numeric.omsi.cfg"
+				}
+			}
+		}
+	},
+	"scopeName": "source.omsi.cfg.hof"
+}

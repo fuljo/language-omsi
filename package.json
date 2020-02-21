@@ -1,0 +1,72 @@
+{
+    "name": "language-omsi",
+    "displayName": "OMSI Syntax and Snippets",
+    "description": "Syntax highlighting and Snippets for OMSI's cfg and script files",
+    "version": "0.0.1",
+    "publisher": "fuljo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fuljo/language-omsi"
+    },
+    "bugs": "https://github.com/fuljo/language-omsi/issues",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages", "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "omsicfg",
+                "aliases": ["OMSI Configuration File", "omsicfg"],
+                "extensions": [".cfg", ".cti", ".hum", ".sco", ".sli",
+                    ".bus", ".ovh"],
+                "configuration": "./cfg-language-configuration.json"
+            },
+            {
+                "id": "omsihof",
+                "aliases": ["OMSI Depot File", "omsihof", "hof", "hofdatei"],
+                "extensions": [".hof"],
+                "configuration": "./cfg-language-configuration.json"
+            },
+            {
+                "id": "omsiscript",
+                "aliases": ["OMSI Script File", "omsiscript"],
+                "extensions": [".osc"],
+                "configuration": "./osc-language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "omsicfg",
+                "scopeName": "source.omsi.cfg",
+                "path": "./syntaxes/omsicfg.tmLanguage.json"
+            },
+            {
+                "language": "omsihof",
+                "scopeName": "source.omsi.cfg.hof",
+                "path": "./syntaxes/omsihof.tmLanguage.json"
+            },
+            {
+                "language": "omsiscript",
+                "scopeName": "source.omsi.script",
+                "path": "./syntaxes/omsiscript.tmLanguage.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "omsicfg",
+                "path": "./snippets/omsicfg.json"
+            },
+            {
+                "language": "omsihof",
+                "path": "./snippets/omsihof.json"
+            },
+            {
+                "language": "omsiscript",
+                "path": "./snippets/omsiscript.json"
+            }
+        ]
+    }
+}

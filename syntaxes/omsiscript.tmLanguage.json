@@ -1,0 +1,229 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "OMSI Script",
+	"patterns": [
+		{
+			"include": "#code-block"
+		},
+		{
+			"include": "#conditionals"
+		},
+		{
+			"include": "#expression"
+		},
+		{
+			"include": "comment"
+		}
+	],
+	"repository": {
+		"code-block": {
+			"patterns": [
+				{
+					"include": "#system-macro-def"
+				},
+				{
+					"include": "#local-macro-def"
+				},
+				{
+					"include": "#trigger-def"
+				},
+				{
+					"include": "#end-block"
+				}
+			]
+		},
+		"system-macro-def": {
+			"name": "meta.function.omsi.script",
+			"match": "{(init|frame)}",
+			"captures": {
+				"1": {
+					"name": "support.function.omsi.script"
+				}
+			}
+		},
+		"local-macro-def": {
+			"name": "meta.function.omsi.script",
+			"match": "{(macro):(\\w+)}",
+			"captures": {
+				"1": {
+					"name": "storage.type.function.omsi.script"
+				},
+				"2": {
+					"name": "entity.name.function.omsi.script"
+				}
+			}
+		},
+		"trigger-def": {
+			"name": "meta.trigger.omsi.script",
+			"match": "{(trigger):(\\w+)}",
+			"captures": {
+				"1": {
+					"name": "storage.type.trigger.omsi.script"
+				},
+				"2": {
+					"name": "entity.name.trigger.omsi.script"
+				}
+			}
+		},
+		"end-block": {
+			"name": "meta.end.omsi.script",
+			"match": "{(end)}",
+			"captures": {
+				"1": {
+					"name": "storage.type.end.omsi.script"
+				}
+			}
+		},
+		"conditionals": {
+			"name": "meta.control.conditional.omsi.script",
+			"match": "{(if|else|endif)}",
+			"captures": {
+				"1": {
+					"name": "keyword.control.conditional.omsi.script"
+				}
+			}
+		},
+		"expression": {
+			"patterns": [
+				{
+					"include": "#load-store-variable"
+				},
+				{
+					"include": "#load-constant"
+				},
+				{
+					"include": "#local-macro-call"
+				},
+				{
+					"include": "#vehicle-macro-call"
+				},
+				{
+					"include": "#trigger-call"
+				},
+				{
+					"include": "operators"
+				},
+				{
+					"include": "#string"
+				},
+				{
+					"include": "#numeric-constant"
+				}
+			]
+		},
+		"load-store-variable": {
+			"name": "meta.omsi.script",
+			"match": "\\([LS]\\.[LS\\$]\\.(\\w+)\\)",
+			"captures": {
+				"1": {
+					"name": "variable.omsi.script"
+				}
+			}
+		},
+		"load-constant": {
+			"name": "meta.omsi.script",
+			"match": "\\([CF]\\.L\\.(\\w+)\\)",
+			"captures": {
+				"1": {
+					"name": "constant.other.variable.omsi.script"
+				}
+			}
+		},
+		"local-macro-call": {
+			"name": "meta.omsi.script",
+			"match": "\\(M\\.L\\.(\\w+)\\)",
+			"captures": {
+				"1": {
+					"name": "entity.name.function.omsi.script"
+				}
+			}
+		},
+		"vehicle-macro-call": {
+			"name": "meta.omsi.script",
+			"match": "\\(M\\.V\\.(STNewTex|STLock|STUnlock|STFilter|STSetColor|STDrawPixel|STDrawRect|STTextOut|GetFontIndex|TextLength|STReadPixel|STCopyColor|STLoadTex|STGetR|STGetG|STGetB|STGetA|GetArrBusLine|GetArrBusTerminus|GetArrBusTimeDiff|GetRouteIndex|GetBusstopString|GetTerminusString|GetRouteTerminusIndex|GetTerminusIndex|GetTerminusCode|GetBusstopCount|GiveChangeCoin|GetRouteBusstopIdent|GetBusstopIndex|GetTTBusstopCount|GetTTBusstopIndex|GetTTTerminusIndex|GetTTLineString|GetTTDelay|GetTTBusstopName|GetTTBusstopDep|GetTTBusstopArr|GetTicketName|GetTicketValue|GetHumanCountOnPathLink|NrSpecRandom|GetHeightAbovePoint|GetDepotStringGlobal|GetHumanCountOnSeat)\\)",
+			"captures": {
+				"1": {
+					"name": "support.function.omsi.script"
+				}
+			}
+		},
+		"trigger-call": {
+			"name": "meta.omsi.script",
+			"match": "\\(T\\.[LF]\\.(\\w+)\\)",
+			"captures": {
+				"1": {
+					"name": "entity.name.soundtrigger.omsi.script"
+				}
+			}
+		},
+		"string": {
+			"name": "string.quoted.double.omsi.script",
+			"begin": "\"",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.omsi.script"
+				}
+			},
+			"end": "\"",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.omsi.script"
+				}
+			},
+			"patterns": [
+				{
+					"name": "constant.character.newline.omsi.script",
+					"match": "@"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"include": "#stack-operators"
+				},
+				{
+					"include": "#logic-operators"
+				},
+				{
+					"include": "#relational-operators"
+				},
+				{
+					"include": "#math-operators"
+				},
+				{
+					"include": "#string-operators"
+				}
+			]
+		},
+		"stack-operators": {
+			"name": "keyword.operator.stack.omsi.script",
+			"match": "\\b(?:%stackdump%|s[0-7]|l[0-7]|d|\\$msg|$d)\\b"
+		},
+		"logic-operators": {
+			"name": "keyword.omsi.operator.logic.script",
+			"match": "(?:&&|\\|\\||\\!)"
+		},
+		"relational-operators": {
+			"name": "keyword.operator.relation.omsi.script",
+			"match": "(?:\\$?(?:\\<=|\\>=|\\=|\\<|\\>))"
+		},
+		"math-operators": {
+			"name": "keyword.operator.math.omsi.script",
+			"match": "(?:\\+|/\\-/|\\-|\\*|/|%|sin|arcsin|arctan|min|max|exp|sqrt|sqr|sgn|pi|random|abs|trunc)"
+		},
+		"string-operators": {
+			"name": "keyword.operator.string.omsi.script",
+			"match": "\\$(?:\\+|\\*|length|cutBegin|cutEnd|SetLengthR|SetLengthC|SetLengthL|IntToStr|IntToStrEnh|StrToFloat|RemoveSpaces)"
+		},
+		"comment": {
+			"name": "comment.line.quote.omsi.script",
+			"match": "^'.*"
+		},
+		"numeric-constant": {
+			"name": "constant.numeric.omsi.cfg",
+			"match": "^\\-?\\d+\\.?\\d*"
+		}
+	},
+	"scopeName": "source.omsi.script"
+}

@@ -1,0 +1,571 @@
+{
+    "h1": {
+        "prefix": "h1",
+        "body": [
+            "**********************************************************************",
+            "${1:Section}",
+            "**********************************************************************",
+            "$0"
+        ],
+        "description": "Top-level heading"
+    },
+    "h2": {
+        "prefix": "h2",
+        "body": [
+            "#######################################",
+            "${1:Subsection}",
+            "#######################################",
+            "$0"
+        ],
+        "description": "Second-level heading"
+    },
+    "h3": {
+        "prefix": "h3",
+        "body": [
+            "********************************************",
+            "${1:Subsubsection}",
+            "$0"
+        ],
+        "description": "Third-level heading"
+    },
+    "CTC Texture": {
+        "prefix": ["CTCTexture", "[CTCTexture]"],
+        "body": [
+            "[CTCTexture]",
+            "${1:scheme name}",
+            "${2:filename}",
+            "$0"
+        ]
+    },
+    "Text Texture": {
+        "prefix": ["texttexture", "[texttexture]"],
+        "body": [
+            "[texttexture]",
+            "${1:stringvar}",
+            "${2:fontname}",
+            "${3:width}",
+            "${4:height}",
+            "${5:1}",
+            "${6:0}",
+            "${7:0}",
+            "${8:0}",
+            "",
+            "$0"
+        ]
+    },
+    "Text Texture (Enhanced)": {
+        "prefix": ["texttexture_enh", "[texttexture_enh]"],
+        "body": [
+            "[texttexture_enh]",
+            "${1:stringvar}",
+            "${2:fontname}",
+            "${3:width}",
+            "${4:height}",
+            "${5:1}",
+            "${6:0}",
+            "${7:0}",
+            "${8:0}",
+            "${9:|0,1,2,3,4,5|}",
+            "${10:grid}",
+            "",
+            "$0"
+        ]
+    },
+    "Script Texture": {
+        "prefix": ["scripttexture", "[scripttexture]"],
+        "body": [
+            "[scripttexture]",
+            "${1:width}",
+            "${2:height}",
+            "",
+            "$0"
+        ]
+    },
+    "Spotlight": {
+        "prefix": ["spotlight", "[spotlight]"],
+        "body": [
+            "[spotlight]",
+            "${1:pos_x}",
+            "${2:pos_y}",
+            "${3:pos_z}",
+            "${4:dir_x}",
+            "${5:dir_y}",
+            "${6:dir_z}",
+            "${7:R}",
+            "${8:G}",
+            "${9:B}",
+            "${10:Range}",
+            "${11:InnerCone}",
+            "${12:OuterCone}",
+            "",
+            "$0"
+        ]
+    },
+    "Light source": {
+        "prefix": ["light", "[light]"],
+        "body": [
+            "[light_enh_2]",
+            "${1:pos_x}",
+            "${2:pos_y}",
+            "${3:pos_z}",
+            "${4:dir_x}",
+            "${5:dir_y}",
+            "${6:dir_z}",
+            "${7:up_x}",
+            "${8:up_y}",
+            "${9:up_z}",
+            "${10:omnidirectional (0-1)}",
+            "${11:rotating (0: follow dir, 1: face user, 2: follow user)}",
+            "${12:R}",
+            "${13:G}",
+            "${14:B}",
+            "${15:size}",
+            "${16:conesize_inner_angle}",
+            "${17:conesize_outer_angle}",
+            "${18:fading_variable}",
+            "${19:factor}",
+            "${20:z-offset}",
+            "${21:(0: none, +1: star, +2: no fog effect, +4: only effects)}",
+            "${22:cone}",
+            "${23:timeconst}",
+            "${24:bitmap}",
+            "",
+            "$0"
+        ]
+    },
+    "Interior Light": {
+        "prefix": ["interiorlight", "[interiorlight]"],
+        "body": [
+            "[interiorlight]",
+            "${1:variable}",
+            "${2:radius}",
+            "${3:R}",
+            "${4:G}",
+            "${5:B}",
+            "${6:pos_x}",
+            "${7:pos_y}",
+            "${8:pos_z}",
+            "",
+            "$0"
+        ]
+    },
+    "Mesh": {
+        "prefix": ["mesh", "[mesh]"],
+        "body": [
+            "[mesh]",
+            "${1:filename}.o3d",
+            "0",
+            "",
+            "[viewpoint]",
+            "${2:3}",
+            "",
+            "$0"
+        ]
+    },
+    "Animation": {
+        "prefix": ["newanim", "[newanim]"],
+        "body": [
+            "[newanim]",
+            "${1:origin_from_mesh}",
+            "${2:|anim_trans,anim_rot|}",
+            "${3:variable}",
+            "${4:factor}",
+            "",
+            "$0"
+        ]
+    },
+    "Visibility variable": {
+        "prefix": ["visible", "[visible]"],
+        "body": [
+            "[visible]",
+            "${1:variable}",
+            "${2:value}",
+            "",
+            "$0"
+        ]
+    },
+    "Interior illumination": {
+        "prefix": ["illumination_interior", "[illumination_interior]"],
+        "body": [
+            "[illumination_interior]",
+            "${1:-1}",
+            "${2:-1}",
+            "${3:-1}",
+            "${4:-1}",
+            "",
+            "$0"
+        ]
+    },
+    "Mouse Event": {
+        "prefix": ["mouseevent", "[mouseevent]"],
+        "body": [
+            "[mouseevent]",
+            "${1:event_name}",
+            "",
+            "$0"
+        ]
+    },
+    "Material": {
+        "prefix": ["matl", "[matl]"],
+        "body": [
+            "[matl]",
+            "${1:texture}",
+            "${2:index}",
+            "",
+            "$0"
+        ]
+    },
+    "Material change": {
+        "prefix": ["matl_change", "[matl_change]"],
+        "body": [
+            "[matl_change]",
+            "${1:texture}",
+            "${2:index}",
+            "${2:variable}",
+            "",
+            "[matl_item]",
+            "",
+            "$0"
+        ]
+    },
+    "Material allcolor": {
+        "prefix": ["matl_allcolor", "[matl_allcolor]"],
+        "body": [
+            "${1:Diffuse (R)}",
+            "${2:Diffuse (G)}",
+            "${3:Diffuse (B)}",
+            "${4:Diffuse (A)}",
+            "${5:Ambient (R)}",
+            "${6:Ambient (G)}",
+            "${7:Ambient (B)}",
+            "${8:Specular (R)}",
+            "${9:Specular (G)}",
+            "${10:Specular (B)}",
+            "${11:Emissive (R)}",
+            "${12:Emissive (G)}",
+            "${13:Emissive (B)}",
+            "${14:Power}",
+            "",
+            "$0"
+        ]
+    },
+    "Material Alpha": {
+        "prefix": ["matl_alpha", "[matl_alpha]"],
+        "body": [
+            "[matl_alpha]",
+            "${1:2}",
+            "",
+            "$0"
+        ]
+    },
+    "Envmap": {
+        "prefix": ["matl_envmap", "[matl_envmap]"],
+        "body": [
+            "[matl_envmap]",
+            "${1:envmap.bmp}",
+            "${2:factor}",
+            "",
+            "$0"
+        ]
+    },
+    "Lightmap": {
+        "prefix": ["matl_lightmap", "[matl_lightmap]"],
+        "body": [
+            "[matl_lightmap]",
+            "${1:lightmap.bmp}",
+            "${2:variable}",
+            "",
+            "$0"
+        ]
+    },
+    "Nightmap": {
+        "prefix": ["matl_nightmap", "[matl_nightmap]"],
+        "body": [
+            "[matl_nightmap]",
+            "${1:nightmap.bmp}",
+            "",
+            "$0"
+        ]
+    },
+    "NoZWrite": {
+        "prefix": ["matl_noZwrite", "[matl_noZwrite]"],
+        "body": [
+            "[matl_noZwrite]",
+            "",
+            "$0"
+        ]
+    },
+    "Transmap": {
+        "prefix": ["matl_transmap", "[matl_transmap]"],
+        "body": [
+            "[matl_transmap]",
+            "${1:transmap.bmp}",
+            "",
+            "$0"
+        ]
+    },
+    "Use text texture": {
+        "prefix": ["useTextTexture", "[useTextTexture]"],
+        "body": [
+            "[useTextTexture]",
+            "${1:index}",
+            "",
+            "$0"
+        ]
+    },
+    "AIList group": {
+        "prefix": ["aigroup_2", "[aigroup_2]"],
+        "body": [
+            "[aigroup_2]",
+            "${1:name}",
+            "${2:depot}",
+            "${3:vehicle path}\t${4:Factor}",
+            "$0",
+            "[end]"
+        ]
+    },
+    "AIList depot group": {
+        "prefix": ["aigroup_depot", "[aigroup_depot]"],
+        "body": [
+            "[aigroup_depot]",
+            "${1:name}",
+            "${2:depot}",
+            "",
+            "$0"
+        ]
+    },
+    "AIList depot type group": {
+        "prefix": ["aigroup_depot_typgroup_2", "[aigroup_depot_typgroup_2]"],
+        "body": [
+            "[aigroup_depot_typgroup_2]",
+            "${1:vehicle path}",
+            "${2:depot}",
+            "${3:number}\t${4:license plate}\t${5:repaint}",
+            "$0",
+            "[end]"
+        ]
+    },
+    "Passenger position": {
+        "prefix": ["passpos", "[passpos]"],
+        "body": [
+            "[passpos]",
+            "${1:x}",
+            "${2:y}",
+            "${3:z}",
+            "${4:seat height}",
+            "${5:rot}",
+            "",
+            "$0"
+        ]
+    },
+    "Bus entry point": {
+        "prefix": ["entry", "[entry]"],
+        "body": [
+            "[entry]",
+            "${1:path-point}",
+            "",
+            "$0"
+        ]
+    },
+    "Bus exit point": {
+        "prefix": ["exit", "[exit]"],
+        "body": [
+            "[exit]",
+            "${1:path-point}",
+            "",
+            "$0"
+        ]
+    },
+    "Ticket printer point": {
+        "prefix": ["stamper", "[stamper]"],
+        "body": [
+            "[stamper]",
+            "${1:path-point}",
+            "${2:x}",
+            "${3:y}",
+            "${4:z}",
+            "",
+            "$0"
+        ]
+    },
+    "Ticket sale point": {
+        "prefix": ["ticket_sale", "[ticket_sale]"],
+        "body": [
+            "[ticket_sale]",
+            "${1:path-point}",
+            "${2:x}",
+            "${3:y}",
+            "${4:z}",
+            "",
+            "$0"
+        ]
+    },
+    "Ticket sale money drop area": {
+        "prefix": ["ticket_sale_money_point", "[ticket_sale_money_point]"],
+        "body": [
+            "[ticket_sale_money_point]",
+            "${1:path-point}",
+            "${2:pos_x}",
+            "${3:pos_y}",
+            "${4:pos_z}",
+            "${5:var_x}",
+            "${6:var_y}",
+            "",
+            "$0"
+        ]
+    },
+    "Ticket sale change area": {
+        "prefix": ["ticket_sale_change_point", "[ticket_sale_change_point]"],
+        "body": [
+            "[ticket_sale_change_point]",
+            "${1:path-point}",
+            "${2:pos_x}",
+            "${3:pos_y}",
+            "${4:pos_z}",
+            "${5:var_x}",
+            "${6:var_y}",
+            "",
+            "$0"
+        ]
+    },
+    "Passenger path point": {
+        "prefix": ["pathpnt", "[pathpnt]"],
+        "body": [
+            "[pathpnt]",
+            "${1:x}",
+            "${2:y}",
+            "${3:z}",
+            "",
+            "$0"
+        ]
+    },
+    "Passenger path link": {
+        "prefix": ["pathlink", "[pathlink]"],
+        "body": [
+            "[pathlink]",
+            "${1:first point}",
+            "${2:second point}",
+            "",
+            "$0"
+        ]
+    },
+    "Simple sound": {
+        "prefix": ["sound", "[sound]"],
+        "body": [
+            "[sound]",
+            "${1:file.wav}",
+            "${2:volume}",
+            "",
+            "[viewpoint]",
+            "${3:3}",
+            "",
+            "$0"
+        ]
+    },
+    "Loop sound": {
+        "prefix": ["loopsound", "[loopsound]"],
+        "body": [
+            "[loopsound]",
+            "${1:file.wav}",
+            "${2:44100}",
+            "${3:variable}",
+            "${4:factor}",
+            "${5:volume}",
+            "",
+            "[viewpoint]",
+            "${6:3}",
+            "",
+            "$0"
+        ]
+    },
+    "Sound location": {
+        "prefix": ["3d", "[3d]"],
+        "body": [
+            "[3d]",
+            "${1:x}",
+            "${2:y}",
+            "${3:z}",
+            "${4:radius}",
+            "",
+            "$0"
+        ]
+    },
+    "Sound trigger": {
+        "prefix": ["trigger", "[trigger]"],
+        "body": [
+            "[trigger]",
+            "${1:trigger name}",
+            "",
+            "$0"
+        ]
+    },
+    "Sound condition": {
+        "prefix": ["conditionSingle", "[conditionSingle]"],
+        "body": [
+            "[conditionSingle]",
+            "${1:variable}",
+            "${1:value}",
+            "${1|0,1,2,3,4,5|}",
+            "",
+            "$0"
+        ]
+    },
+    "Sound volume curve": {
+        "prefix": ["volcurve", "[volcurve]"],
+        "body": [
+            "[volcurve]",
+            "${1:variable}",
+            "",
+            "[pnt]",
+            "${2:value}",
+            "${3:volume}",
+            "",
+            "$0"
+        ]
+    },
+    "Sound volume curve point": {
+        "prefix": ["pnt", "[pnt]"],
+        "body": [
+            "[pnt]",
+            "${1:value}",
+            "${2:volume}",
+            "",
+            "$0"
+        ]
+    },
+    "Repaint": {
+        "prefix": ["Repaint", "rep"],
+        "body": [
+            "***************************************",
+            "${1:Repaint name}",
+            "***************************************",
+            "",
+            "[item]",
+            "${1:Repaint name}",
+            "${2:Scheme name}",
+            "${3:texture.bmp}",
+            "",
+            "$0"
+        ]
+    },
+    "Repaint item": {
+        "prefix": ["item", "[item]"],
+        "body": [
+            "[item]",
+            "${1:Repaint name}",
+            "${2:Scheme name}",
+            "${3:texture.bmp}",
+            "",
+            "$0"
+        ]
+    },
+    "Repaint setvar": {
+        "prefix": ["setvar", "[setvar]"],
+        "body": [
+            "[setvar]",
+            "${1:value}",
+            "",
+            "$0"
+        ]
+    }
+}

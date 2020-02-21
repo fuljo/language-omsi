@@ -1,0 +1,35 @@
+{
+    "Terminus list": {
+        "prefix": ["addterminus_list", "[addterminus_list]"],
+        "body": [
+            "[addterminus_list]",
+            "${1|ALLEX\t,\t|}${2:code}\t${3:Name}\t${4:IBIS1}\t${5:ANNAX line 1}\t${6:ANNAX line 2}\t${7:ANNAX Side}\t${8:Rollband}\t${9:IBIS2}\t${10:Steckschild}\t${11:Krueger-bitmap}",
+            "$0",
+            "[end]"
+        ]
+    },
+    "Terminus": {
+        "prefix": ["Terminus", "term"],
+        "body": [
+            "${1|ALLEX\t,\t|}${2:code}\t${3:Name}\t${4:IBIS1}\t${5:ANNAX line 1}\t${6:ANNAX line 2}\t${7:ANNAX Side}\t${8:Rollband}\t${9:IBIS2}\t${10:Steckschild}\t${11:Krueger-bitmap}",
+            "$0"
+        ]
+    },
+    "Bus stop list": {
+        "prefix": ["addbusstop_list", "[addbusstop_list]"],
+        "body": [
+            "[addbusstop_list]",
+            "${1:Name}\t${2:IBIS1}\t${3:Int. display line 1}\t${4:Int. display line 2}\t${5:IBIS2}",
+            "$0",
+            "[end]"
+        ]
+    },
+    "Bus stop": {
+        "prefix": ["Bus stop", "busstop"],
+        "body": [
+            "${1:Name}\t${2:IBIS1}\t${3:Int. display line 1}\t${4:Int. display line 2}\t${5:IBIS2}",
+            "$0"
+        ]
+    },
+}
+    

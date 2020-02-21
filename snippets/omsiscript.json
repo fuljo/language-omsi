@@ -1,0 +1,73 @@
+{
+    "Macro definition": {
+        "prefix": ["macro", "{macro"],
+        "body": [
+            "{macro:${1:name}}",
+            "\t$0",
+            "{end}"
+        ]
+    },
+    "Trigger definition": {
+        "prefix": ["trigger", "{trigger"],
+        "body": [
+            "{trigger:${1:name}}",
+            "\t$0",
+            "{end}"
+        ]
+    },
+    "If-then": {
+        "prefix": ["if", "{if}"],
+        "body": [
+            "{if}",
+            "\t$0",
+            "{endif}"
+        ]
+    },
+    "If-then-else": {
+        "prefix": ["if-else", "{if}"],
+        "body": [
+            "{if}",
+            "\t$0",
+            "{else}",
+            "\t",
+            "{endif}"
+        ]
+    },
+    "Load local": {
+        "prefix": ["load-local"],
+        "body": "(L.L.${1:variable})"
+    },
+    "Save local": {
+        "prefix": ["save-local"],
+        "body": "(S.L.${1:variable})"
+    },
+    "Load string": {
+        "prefix": ["load-string"],
+        "body": "(L.$.${1:variable})"
+    },
+    "Save string": {
+        "prefix": ["save-string"],
+        "body": "(S.$.${1:variable})"
+    },
+    "Constant local": {
+        "prefix": ["const-local"],
+        "body": "(C.L.${1:constant})"
+    },
+    "Function local": {
+        "prefix": ["function-local"],
+        "body": "(F.L.${1:function})"
+    },
+    "Macro local": {
+        "prefix": ["macro-local"],
+        "body": "(M.L.${1:macro})"
+    },
+    "Macro vehicle": {
+        "prefix": ["macro-vehicle"],
+        "body": "(M.V.${1|STNewTex,STLock,STUnlock,STFilter,STSetColor,STDrawPixel,STDrawRect,STTextOut,GetFontIndex,TextLength,STReadPixel,STCopyColor,STLoadTex,STGetR,STGetG,STGetB,STGetA,GetArrBusLine,GetArrBusTerminus,GetArrBusTimeDiff,GetRouteIndex,GetBusstopString,GetTerminusString,GetRouteTerminusIndex,GetTerminusIndex,GetTerminusCode,GetBusstopCount,GiveChangeCoin,GetRouteBusstopIdent,GetBusstopIndex,GetTTBusstopCount,GetTTBusstopIndex,GetTTTerminusIndex,GetTTLineString,GetTTDelay,GetTTBusstopName,GetTTBusstopDep,GetTTBusstopArr,GetTicketName,GetTicketValue,GetHumanCountOnPathLink,NrSpecRandom,GetHeightAbovePoint,GetDepotStringGlobal,GetHumanCountOnSeat|})"
+    },
+    "Trigger local": {
+        "prefix": ["trigger-local"],
+        "body": "(T.L.${1:trigger})"
+    }    
+}
+    
