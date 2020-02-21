@@ -2,7 +2,7 @@
     "name": "language-omsi",
     "displayName": "OMSI Syntax and Snippets",
     "description": "Syntax highlighting and Snippets for OMSI's cfg and script files",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "fuljo",
     "repository": {
         "type": "git",
@@ -13,27 +13,50 @@
         "vscode": "^1.42.0"
     },
     "categories": [
-        "Programming Languages", "Snippets"
+        "Programming Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [
             {
                 "id": "omsicfg",
-                "aliases": ["OMSI Configuration File", "omsicfg"],
-                "extensions": [".cfg", ".cti", ".hum", ".sco", ".sli",
-                    ".bus", ".ovh"],
+                "aliases": [
+                    "OMSI Configuration File",
+                    "omsicfg"
+                ],
+                "extensions": [
+                    ".cfg",
+                    ".cti",
+                    ".hum",
+                    ".sco",
+                    ".sli",
+                    ".bus",
+                    ".ovh"
+                ],
                 "configuration": "./cfg-language-configuration.json"
             },
             {
                 "id": "omsihof",
-                "aliases": ["OMSI Depot File", "omsihof", "hof", "hofdatei"],
-                "extensions": [".hof"],
+                "aliases": [
+                    "OMSI Depot File",
+                    "omsihof",
+                    "hof",
+                    "hofdatei"
+                ],
+                "extensions": [
+                    ".hof"
+                ],
                 "configuration": "./cfg-language-configuration.json"
             },
             {
                 "id": "omsiscript",
-                "aliases": ["OMSI Script File", "omsiscript"],
-                "extensions": [".osc"],
+                "aliases": [
+                    "OMSI Script File",
+                    "omsiscript"
+                ],
+                "extensions": [
+                    ".osc"
+                ],
                 "configuration": "./osc-language-configuration.json"
             }
         ],
