@@ -2,7 +2,7 @@
     "name": "language-omsi",
     "displayName": "OMSI Syntax and Snippets",
     "description": "Syntax highlighting and Snippets for OMSI's cfg and script files",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "fuljo",
     "repository": {
         "type": "git",
