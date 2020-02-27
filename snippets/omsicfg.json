@@ -404,12 +404,11 @@
         "prefix": ["ticket_sale_money_point", "[ticket_sale_money_point]"],
         "body": [
             "[ticket_sale_money_point]",
-            "${1:path-point}",
-            "${2:pos_x}",
-            "${3:pos_y}",
-            "${4:pos_z}",
-            "${5:var_x}",
-            "${6:var_y}",
+            "${1:pos_x}",
+            "${2:pos_y}",
+            "${3:pos_z}",
+            "${4:var_x}",
+            "${5:var_y}",
             "",
             "$0"
         ]
@@ -418,12 +417,11 @@
         "prefix": ["ticket_sale_change_point", "[ticket_sale_change_point]"],
         "body": [
             "[ticket_sale_change_point]",
-            "${1:path-point}",
-            "${2:pos_x}",
-            "${3:pos_y}",
-            "${4:pos_z}",
-            "${5:var_x}",
-            "${6:var_y}",
+            "${1:pos_x}",
+            "${2:pos_y}",
+            "${3:pos_z}",
+            "${4:var_x}",
+            "${5:var_y}",
             "",
             "$0"
         ]
@@ -563,7 +561,8 @@
         "prefix": ["setvar", "[setvar]"],
         "body": [
             "[setvar]",
-            "${1:value}",
+            "${1:variable}",
+            "${2:value}",
             "",
             "$0"
         ]
