@@ -34,7 +34,7 @@
 		},
 		"system-macro-def": {
 			"name": "meta.function.omsi.script",
-			"match": "{(init|frame)}",
+			"match": "{(init|frame|frame_ai)}",
 			"captures": {
 				"1": {
 					"name": "support.function.omsi.script"
