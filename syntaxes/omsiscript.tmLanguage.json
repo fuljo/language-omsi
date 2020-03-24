@@ -198,7 +198,7 @@
 		},
 		"stack-operators": {
 			"name": "keyword.operator.stack.omsi.script",
-			"match": "\\b(?:%stackdump%|s[0-7]|l[0-7]|d|\\$msg|$d)\\b"
+			"match": "\\b(?:%stackdump%|s[0-9]|l[0-9]|d|\\$msg|$d)\\b"
 		},
 		"logic-operators": {
 			"name": "keyword.omsi.operator.logic.script",
