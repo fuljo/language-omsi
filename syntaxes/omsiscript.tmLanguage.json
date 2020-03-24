@@ -43,7 +43,7 @@
 		},
 		"local-macro-def": {
 			"name": "meta.function.omsi.script",
-			"match": "{(macro):(\\w+)}",
+			"match": "{(macro):([\\w\\-+]+)}",
 			"captures": {
 				"1": {
 					"name": "storage.type.function.omsi.script"
@@ -55,7 +55,7 @@
 		},
 		"trigger-def": {
 			"name": "meta.trigger.omsi.script",
-			"match": "{(trigger):(\\w+)}",
+			"match": "{(trigger):([\\w\\-+]+)}",
 			"captures": {
 				"1": {
 					"name": "storage.type.trigger.omsi.script"
@@ -113,7 +113,7 @@
 		},
 		"load-store-variable": {
 			"name": "meta.omsi.script",
-			"match": "\\([LS]\\.[LS\\$]\\.(\\w+)\\)",
+			"match": "\\([LS]\\.[LS\\$]\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "variable.omsi.script"
@@ -122,7 +122,7 @@
 		},
 		"load-constant": {
 			"name": "meta.omsi.script",
-			"match": "\\([CF]\\.L\\.(\\w+)\\)",
+			"match": "\\([CF]\\.L\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "constant.other.variable.omsi.script"
@@ -131,7 +131,7 @@
 		},
 		"local-macro-call": {
 			"name": "meta.omsi.script",
-			"match": "\\(M\\.L\\.(\\w+)\\)",
+			"match": "\\(M\\.L\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "entity.name.function.omsi.script"
@@ -149,7 +149,7 @@
 		},
 		"trigger-call": {
 			"name": "meta.omsi.script",
-			"match": "\\(T\\.[LF]\\.(\\w+)\\)",
+			"match": "\\(T\\.[LF]\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "entity.name.soundtrigger.omsi.script"

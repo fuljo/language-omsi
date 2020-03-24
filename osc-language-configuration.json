@@ -24,7 +24,7 @@
         ["\"", "\""]
     ],
     "indentationRules": {
-        "increaseIndentPattern": "{(init|frame|frame_ai|if|else|(macro|trigger):(\\w+))}",
+        "increaseIndentPattern": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
         "decreaseIndentPattern": "{(end|endif)}"
     }
 }
