@@ -221,7 +221,7 @@
 			"match": "^'.*"
 		},
 		"numeric-constant": {
-			"name": "constant.numeric.omsi.cfg",
+			"name": "constant.numeric.omsi.script",
 			"match": "^\\-?\\d+\\.?\\d*"
 		}
 	},
