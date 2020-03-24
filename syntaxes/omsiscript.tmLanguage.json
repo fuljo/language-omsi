@@ -12,7 +12,7 @@
 			"include": "#expression"
 		},
 		{
-			"include": "comment"
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -101,7 +101,7 @@
 					"include": "#trigger-call"
 				},
 				{
-					"include": "operators"
+					"include": "#operators"
 				},
 				{
 					"include": "#string"
