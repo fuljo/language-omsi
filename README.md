@@ -28,5 +28,11 @@ It's lonely in here.
 
 ## Release notes
 
+### 1.0.0
+Fix typos and bugs with OMSI script language (thanks to [Road-hog123](https://github.com/Road-hog123))
+
+### 0.2.0
+Fix parameters for money point tags and remove auto-closing single quotes
+
 ### 0.1.0
 Initial release
