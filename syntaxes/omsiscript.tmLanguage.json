@@ -12,7 +12,7 @@
 			"include": "#expression"
 		},
 		{
-			"include": "comment"
+			"include": "#comment"
 		}
 	],
 	"repository": {
@@ -34,7 +34,7 @@
 		},
 		"system-macro-def": {
 			"name": "meta.function.omsi.script",
-			"match": "{(init|frame)}",
+			"match": "{(init|frame|frame_ai)}",
 			"captures": {
 				"1": {
 					"name": "support.function.omsi.script"
@@ -43,7 +43,7 @@
 		},
 		"local-macro-def": {
 			"name": "meta.function.omsi.script",
-			"match": "{(macro):(\\w+)}",
+			"match": "{(macro):([\\w\\-+]+)}",
 			"captures": {
 				"1": {
 					"name": "storage.type.function.omsi.script"
@@ -55,7 +55,7 @@
 		},
 		"trigger-def": {
 			"name": "meta.trigger.omsi.script",
-			"match": "{(trigger):(\\w+)}",
+			"match": "{(trigger):([\\w\\-+]+)}",
 			"captures": {
 				"1": {
 					"name": "storage.type.trigger.omsi.script"
@@ -101,7 +101,7 @@
 					"include": "#trigger-call"
 				},
 				{
-					"include": "operators"
+					"include": "#operators"
 				},
 				{
 					"include": "#string"
@@ -113,7 +113,7 @@
 		},
 		"load-store-variable": {
 			"name": "meta.omsi.script",
-			"match": "\\([LS]\\.[LS\\$]\\.(\\w+)\\)",
+			"match": "\\([LS]\\.[LS\\$]\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "variable.omsi.script"
@@ -122,7 +122,7 @@
 		},
 		"load-constant": {
 			"name": "meta.omsi.script",
-			"match": "\\([CF]\\.L\\.(\\w+)\\)",
+			"match": "\\([CF]\\.L\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "constant.other.variable.omsi.script"
@@ -131,7 +131,7 @@
 		},
 		"local-macro-call": {
 			"name": "meta.omsi.script",
-			"match": "\\(M\\.L\\.(\\w+)\\)",
+			"match": "\\(M\\.L\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "entity.name.function.omsi.script"
@@ -149,7 +149,7 @@
 		},
 		"trigger-call": {
 			"name": "meta.omsi.script",
-			"match": "\\(T\\.[LF]\\.(\\w+)\\)",
+			"match": "\\(T\\.[LF]\\.([\\w\\-+]+)\\)",
 			"captures": {
 				"1": {
 					"name": "entity.name.soundtrigger.omsi.script"
@@ -198,7 +198,7 @@
 		},
 		"stack-operators": {
 			"name": "keyword.operator.stack.omsi.script",
-			"match": "\\b(?:%stackdump%|s[0-7]|l[0-7]|d|\\$msg|$d)\\b"
+			"match": "\\b(?:%stackdump%|s[0-9]|l[0-9]|d|\\$msg|$d)\\b"
 		},
 		"logic-operators": {
 			"name": "keyword.omsi.operator.logic.script",
@@ -221,7 +221,7 @@
 			"match": "^'.*"
 		},
 		"numeric-constant": {
-			"name": "constant.numeric.omsi.cfg",
+			"name": "constant.numeric.omsi.script",
 			"match": "^\\-?\\d+\\.?\\d*"
 		}
 	},
