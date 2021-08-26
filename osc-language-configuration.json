@@ -29,8 +29,9 @@
     },
     // Code folding
     "folding": {
-    "markers": {
-      "start": "{((macro|trigger):([\\w\\-+]+))|if|else}",
-      "end": "{(endif|end)}"
+        "markers": {
+            "start": "{((macro|trigger):([\\w\\-+]+))|if|else}",
+            "end": "{(endif|end)}"
+      }
     }
 }
