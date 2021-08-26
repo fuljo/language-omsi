@@ -26,5 +26,11 @@
     "indentationRules": {
         "increaseIndentPattern": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
         "decreaseIndentPattern": "{(end|endif)}"
+    },
+    // Code folding
+    "folding": {
+    "markers": {
+      "start": "{((macro|trigger):([\\w\\-+]+))|if|else}",
+      "end": "{(endif|end)}"
     }
 }
