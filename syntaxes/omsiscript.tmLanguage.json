@@ -214,7 +214,7 @@
 		},
 		"string-operators": {
 			"name": "keyword.operator.string.omsi.script",
-			"match": "\\$(?:\\+|\\*|length|cutBegin|cutEnd|SetLengthR|SetLengthC|SetLengthL|IntToStr|IntToStrEnh|StrToFloat|RemoveSpaces)"
+			"match": "\\$(?:\\+|\\*|length|cutBegin|cutEnd|SetLengthR|SetLengthC|SetLengthL|IntToStrEnh|IntToStr|StrToFloat|RemoveSpaces)"
 		},
 		"comment": {
 			"name": "comment.line.quote.omsi.script",
