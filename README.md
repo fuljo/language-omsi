@@ -24,9 +24,12 @@ No additional settings are provided.
 
 ## Known Issues
 
-It's lonely in here.
+- VSCode suggests folding for single-line comments in scripts
 
 ## Release notes
+
+### 1.1.0
+Add code folding support and fix highlighting (thanks to [sjain](https://github.com/sjain882))
 
 ### 1.0.0
 Fix typos and bugs with OMSI script language (thanks to [Road-hog123](https://github.com/Road-hog123))
