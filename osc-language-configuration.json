@@ -30,7 +30,7 @@
     // Code folding
     "folding": {
         "markers": {
-            "start": "{((macro|trigger):([\\w\\-+]+))|if|else}",
+            "start": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
             "end": "{(endif|end)}"
       }
     }
