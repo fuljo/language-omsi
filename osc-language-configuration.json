@@ -32,6 +32,6 @@
         "markers": {
             "start": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
             "end": "{(endif|end)}"
-      }
+        }
     }
 }
