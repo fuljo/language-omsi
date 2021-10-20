@@ -125,7 +125,7 @@
             "match": "\\([CF]\\.L\\.([\\w\\-+]+)\\)",
             "captures": {
                 "1": {
-                    "name": "constant.other.variable.omsi.script"
+                    "name": "variable.other.constant.omsi.script"
                 }
             }
         },
@@ -201,7 +201,7 @@
             "match": "\\b(?:%stackdump%|s[0-9]|l[0-9]|d|\\$msg|$d)\\b"
         },
         "logic-operators": {
-            "name": "keyword.omsi.operator.logic.script",
+            "name": "keyword.operator.logic.omsi.script",
             "match": "(?:&&|\\|\\||\\!)"
         },
         "relational-operators": {
