@@ -140,7 +140,7 @@
         },
         "vehicle-macro-call": {
             "name": "meta.omsi.script",
-            "match": "\\(M\\.V\\.(STNewTex|STLock|STUnlock|STFilter|STSetColor|STDrawPixel|STDrawRect|STTextOut|GetFontIndex|TextLength|STReadPixel|STCopyColor|STLoadTex|STGetR|STGetG|STGetB|STGetA|GetArrBusLine|GetArrBusTerminus|GetArrBusTimeDiff|GetRouteIndex|GetBusstopString|GetTerminusString|GetRouteTerminusIndex|GetTerminusIndex|GetTerminusCode|GetBusstopCount|GiveChangeCoin|GetRouteBusstopIdent|GetBusstopIndex|GetTTBusstopCount|GetTTBusstopIndex|GetTTTerminusIndex|GetTTLineString|GetTTDelay|GetTTBusstopName|GetTTBusstopDep|GetTTBusstopArr|GetTicketName|GetTicketValue|GetHumanCountOnPathLink|NrSpecRandom|GetHeightAbovePoint|GetDepotStringGlobal|GetHumanCountOnSeat)\\)",
+            "match": "\\(M\\.V\\.(ST(?:NewTex|LoadTex|Lock|Unlock|Filter|ReadPixel|Get[ARGB]|SetColor|CopyColor|DrawPixel|DrawRect|TextOut)|Get(?:ArrBus(?:Line|Terminus|TimeDiff)|TT(?:Busstop(?:Count|Index|Name|Arr|Dep)|TerminusIndex|LineString|Delay)|Terminus(?:Code|Index|String)|Route(?:Index|TerminusIndex|BusstopIdent)|Busstop(?:Count|Index|String)|Ticket(?:Name|Value)|HumanCountOn(?:PathLink|Seat)|HeightAbovePoint|DepotStringGlobal|FontIndex)|GiveChangeCoin|NrSpecRandom|TextLength)\\)",
             "captures": {
                 "1": {
                     "name": "support.function.omsi.script"
@@ -198,7 +198,7 @@
         },
         "stack-operators": {
             "name": "keyword.operator.stack.omsi.script",
-            "match": "\\b(?:%stackdump%|s[0-9]|l[0-9]|d|\\$msg|$d)\\b"
+            "match": "(?:%stackdump%|[sl][0-9]|\\$?d|\\$msg)"
         },
         "logic-operators": {
             "name": "keyword.operator.logic.omsi.script",
@@ -214,7 +214,7 @@
         },
         "string-operators": {
             "name": "keyword.operator.string.omsi.script",
-            "match": "\\$(?:\\+|\\*|length|cutBegin|cutEnd|SetLengthR|SetLengthC|SetLengthL|IntToStrEnh|IntToStr|StrToFloat|RemoveSpaces)"
+            "match": "\\$(?:\\+|\\*|length|cutBegin|cutEnd|SetLength[LCR]|IntToStrEnh|IntToStr|StrToFloat|RemoveSpaces)"
         },
         "comment": {
             "name": "comment.line.quote.omsi.script",
@@ -222,7 +222,7 @@
         },
         "numeric-constant": {
             "name": "constant.numeric.omsi.script",
-            "match": "^\\-?\\d+\\.?\\d*"
+            "match": "\\-?\\d+(?:\\.\\d+)?"
         }
     },
     "scopeName": "source.omsi.script"
