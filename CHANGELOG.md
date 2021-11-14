@@ -2,6 +2,14 @@
 
 All notable changes to the "language-omsi" extension will be documented in this file.
 
+## [1.1.1] - 2021-11-14
+Code cleanup and fixes by [Road-hog123](https://github.com/Road-hog123):
+- Use consistent indentation, whitespace and newlines
+- Fix omsiscript scopes
+- Fix omsiscript numeric constants
+- Add `$d` operator
+- Reuse regexes to remove duplication
+
 ## [1.1.0] - 2021-09-13
 Fixes and improvements by [sjain](https://github.com/sjain882) and [Road-hog123](https://github.com/Road-hog123):
 - Fix highlighting for `IntToStrEnh` keyword

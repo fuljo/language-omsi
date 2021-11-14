@@ -28,6 +28,9 @@ No additional settings are provided.
 
 ## Release notes
 
+### 1.1.1
+Code cleanup and fixes (thanks to [Road-hog123](https://github.com/Road-hog123))
+
 ### 1.1.0
 Add code folding support and fix highlighting (thanks to [sjain](https://github.com/sjain882))
 
