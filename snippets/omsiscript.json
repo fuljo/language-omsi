@@ -68,6 +68,5 @@
     "Trigger local": {
         "prefix": ["trigger-local"],
         "body": "(T.L.${1:trigger})"
-    }    
+    }
 }
-    

@@ -30,6 +30,5 @@
             "${1:Name}\t${2:IBIS1}\t${3:Int. display line 1}\t${4:Int. display line 2}\t${5:IBIS2}",
             "$0"
         ]
-    },
+    }
 }
-    

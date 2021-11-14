@@ -1,0 +1,15 @@
+* eol=lf working-tree-encoding=UTF-8 encoding=UTF-8
+
+# Config files
+*.json text
+
+# Repository files
+*.md text
+*.gif binary
+LICENSE text
+.gitignore text
+.gitattributes text
+
+# Exclude from git archive
+.gitignore export-ignore
+.gitattributes export-ignore

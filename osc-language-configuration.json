@@ -3,25 +3,19 @@
         // symbol used for single line comment
         "lineComment": "'"
     },
-    // symbols used as brackets
-    "brackets": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"]
-    ],
+    // no symbols used as brackets
+    "brackets": [],
     // symbols that are auto closed when typing
     "autoClosingPairs": [
-        ["{", "}"],
-        ["[", "]"],
-        ["(", ")"],
-        ["\"", "\""]
+        { "open": "{", "close": "}", "notIn": ["string"] },
+        { "open": "(", "close": ")", "notIn": ["string"] },
+        ["\"", "\""],
     ],
     // symbols that can be used to surround a selection
     "surroundingPairs": [
         ["{", "}"],
-        ["[", "]"],
         ["(", ")"],
-        ["\"", "\""]
+        ["\"", "\""],
     ],
     "indentationRules": {
         "increaseIndentPattern": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
@@ -32,6 +26,6 @@
         "markers": {
             "start": "{(init|frame|frame_ai|if|else|(macro|trigger):([\\w\\-+]+))}",
             "end": "{(endif|end)}"
-      }
+        }
     }
 }
