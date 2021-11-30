@@ -1,4 +1,14 @@
 {
+    "Comment Selection": {
+        "prefix": ["<disabled>", "comment"],
+        "body": [
+            "-<DISABLED>-",
+            "$TM_SELECTED_TEXT",
+            "-<ENABLED>-",
+            "$0"
+        ],
+        "description": "Top-level heading"
+    },
     "h1": {
         "prefix": "h1",
         "body": [
@@ -65,7 +75,7 @@
             "${6:0}",
             "${7:0}",
             "${8:0}",
-            "${9:|0,1,2,3,4,5|}",
+            "${9|0,1,2,3,4,5|}",
             "${10:grid}",
             "",
             "$0"
@@ -154,7 +164,6 @@
         "body": [
             "[mesh]",
             "${1:filename}.o3d",
-            "0",
             "",
             "[viewpoint]",
             "${2:3}",
@@ -167,7 +176,7 @@
         "body": [
             "[newanim]",
             "${1:origin_from_mesh}",
-            "${2:|anim_trans,anim_rot|}",
+            "${2|anim_trans,anim_rot|}",
             "${3:variable}",
             "${4:factor}",
             "",
@@ -258,6 +267,27 @@
             "$0"
         ]
     },
+    "Scale Alpha": {
+        "prefix": ["alphascale", "[alphascale]"],
+        "body": [
+            "[alphascale]",
+            "${1:value}",
+            "",
+            "$0"
+        ],
+        "description":"Alpha channel will be multiplied by the value"
+    },
+    "Bumpmap": {
+        "prefix": ["matl_bumpmap", "[matl_bumpmap]"],
+        "body": [
+            "[matl_bumpmap]",
+            "${1:bump.bmp}",
+            "${2:factor}",
+            "",
+            "$0"
+        ],
+        "description": "(Ony with envmap!) Adds bump effect to material, and set its power (0 - none 1 - full bump)."
+    },
     "Envmap": {
         "prefix": ["matl_envmap", "[matl_envmap]"],
         "body": [
@@ -266,7 +296,18 @@
             "${2:factor}",
             "",
             "$0"
-        ]
+        ],
+        "description": "Adds reflectivity effect to material, and set its power (0 - none 1 - full reflectivity)."
+    },
+    "Envmapmask": {
+        "prefix": ["matl_envmap_mask", "[matl_envmap_mask]"],
+        "body": [
+            "[matl_envmap_mask]",
+            "${1:envmapmask.bmp}",
+            "",
+            "$0"
+        ],
+        "description": "Adds envmap mask based on texture alpha-channel, if none provided mask will be taken from basetexture alpha-channel."
     },
     "Lightmap": {
         "prefix": ["matl_lightmap", "[matl_lightmap]"],
@@ -287,6 +328,16 @@
             "$0"
         ]
     },
+    "Transmap": {
+        "prefix": ["matl_transmap", "[matl_transmap]"],
+        "body": [
+            "[matl_transmap]",
+            "${1:transmap.bmp}",
+            "",
+            "$0"
+        ],
+        "description": "Adds transparency mask, if none provided mask will be taken from basetexture alpha-channel."
+    },
     "NoZWrite": {
         "prefix": ["matl_noZwrite", "[matl_noZwrite]"],
         "body": [
@@ -295,14 +346,34 @@
             "$0"
         ]
     },
-    "Transmap": {
-        "prefix": ["matl_transmap", "[matl_transmap]"],
+    "Free Texture": {
+        "prefix": ["matl_freetex", "[matl_freetex]"],
         "body": [
-            "[matl_transmap]",
-            "${1:transmap.bmp}",
+            "[matl_freetex]",
+            "${1:texture}",
+            "${2:variable}",
+            "$0"
+        ],
+        "description": "Marks texture as \"free to change\" and assigns string variable with replacement texture name"
+    },
+    "Texture address": {
+        "prefix": ["matl_texadress", "[matl_texadress]"],
+        "body": [
+            "[matl_texadress_${1|border,clamp,mirror,mirroronce|}]",
             "",
             "$0"
-        ]
+        ],
+        "description": "Sets texture address mode."
+    },
+    "Texture translation": {
+        "prefix": ["matl_texcoordtrans", "[matl_texcoordtrans]"],
+        "body": [
+            "[matl_texcoordtrans${1|X,Y|}]",
+            "${2:value}",
+            "",
+            "$0"
+        ],
+        "description": "Sets texture translation by given axis (X or Y) by given value."
     },
     "Use text texture": {
         "prefix": ["useTextTexture", "[useTextTexture]"],
