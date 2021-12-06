@@ -352,6 +352,7 @@
             "[matl_freetex]",
             "${1:texture}",
             "${2:variable}",
+            "",
             "$0"
         ],
         "description": "Marks texture as \"free to change\" and assigns string variable with replacement texture name"
