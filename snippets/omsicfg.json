@@ -7,7 +7,7 @@
             "-<ENABLED>-",
             "$0"
         ],
-        "description": "Top-level heading"
+        "description": "Comment selected text"
     },
     "h1": {
         "prefix": "h1",

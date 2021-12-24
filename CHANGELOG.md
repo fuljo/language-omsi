@@ -2,6 +2,26 @@
 
 All notable changes to the "language-omsi" extension will be documented in this file.
 
+
+## [1.2.0] - 2021-12-24
+New snippets and fixes by [zheka20012](https://github.com/zheka20012):
+
+Fixed:
+- `[mesh]` snippet now doesn't have index after name
+- `[newanim]`, `[texttexture_enh]` - fixed choose snippets
+
+Added:
+- comment selected text
+- `[alphascale]`
+- `[matl_bumpmap]`
+- `[matl_envmap_mask]`
+- `[matl_transmap]`
+- `[matl_freetex]`
+- `[matl_texaddress_*]`
+- `[matl_texcoordtransX/Y]`
+
+Bumped VSCode requirement to 1.60+.
+
 ## [1.1.1] - 2021-11-14
 Code cleanup and fixes by [Road-hog123](https://github.com/Road-hog123):
 - Use consistent indentation, whitespace and newlines
