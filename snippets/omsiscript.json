@@ -43,7 +43,7 @@
     },
     "Load system": {
         "prefix": ["load-system"],
-        "body": "(L.S.${1|Timegap,GetTime,NoSound,Pause,Time,Day,Month,Year,DayOfYear,mouse_x,mouse_y,PrecipType,PrecipRate,coll_pos_x,coll_pos_y,coll_pos_z,coll_energy,Weather_Temperature,Weather_AbsHum,wearlifespan,AutoClutch,SunAlt|})"
+        "body": "(L.S.${1|Timegap,GetTime,NoSound,Pause,Time,Day,Month,Year,DayOfYear,mouse_x,mouse_y,coll_pos_x,coll_pos_y,coll_pos_z,coll_energy,Weather_Temperature,Weather_AbsHum,AutoClutch,SunAlt|})"
     },
     "Load string": {
         "prefix": ["load-string"],
