@@ -125,7 +125,7 @@
         },
         "system-variable": {
             "name": "meta.omsi.script",
-            "match": "\\(L\\.[LS]\\.([Tt]ime[Gg]ap|[Gg]et[Tt]ime|NoSound|Pause|Time|Day(?:|OfYear)|Month|Year|mouse_[xy]|coll_(?:energy|pos_[xyz])|Weather_(?:Temperature|AbsHum)|AutoClutch|SunAlt)\\)",
+            "match": "\\(L\\.S\\.([Tt]ime[Gg]ap|[Gg]et[Tt]ime|NoSound|Pause|Time|Day(?:|OfYear)|Month|Year|mouse_[xy]|coll_(?:energy|pos_[xyz])|Weather_(?:Temperature|AbsHum)|AutoClutch|SunAlt)\\)",
             "captures": {
                 "1": {
                     "name": "storage.constant.omsi.script"
