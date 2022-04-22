@@ -377,6 +377,44 @@
         ],
         "description": "Sets texture translation by given axis (X or Y) by given value."
     },
+    "Texchanges": {
+        "prefix": ["texchanges", "[texchanges]"],
+        "body": [
+            "[texchanges]",
+            "${1:path\\to\\a\\file.cfg}",
+            "",
+            "$0"
+        ],
+        "description": "Defines a cfg file that deals with texture changes to a mesh"
+    },
+    "Smoke": {
+        "prefix": ["smoke", "[smoke]"],
+        "body": [
+            "[smoke]",
+            "${1:pos_x}",
+            "${2:pos_y}",
+            "${3:pos_z}",
+            "${4:dir_x}",
+            "${5:dir_y}",
+            "${6:dir_z}",
+            "${7:Velocity variable}",
+            "${8:Speed Variation}",
+            "${9:Frequency variable}",
+            "${10:Lifespan variable}",
+            "${11:Brake Factor}",
+            "${12:Coefficent}",
+            "${13:Start size}",
+            "${14:Magnification rate}",
+            "${15:Initial alpha variable}",
+            "${16:Alpha variation}",
+            "${17:R}",
+            "${18:G}",
+            "${19:B}",
+            "",
+            "$0"
+        ],
+        "description": "Defines a perticle effect within a vehicle (usually exhaust smoke)"
+    },
     "Use text texture": {
         "prefix": ["useTextTexture", "[useTextTexture]"],
         "body": [
@@ -385,6 +423,37 @@
             "",
             "$0"
         ]
+    },
+    "Use script texture": {
+        "prefix": ["useScriptTexture", "[useScriptTexture]"],
+        "body": [
+            "[useScriptTexture]",
+            "${1:index}",
+            "",
+            "$0"
+        ]
+    },
+    "Texture Change Master Definition": {
+        "prefix": ["newtexchangemaster", "[newtexchangemaster]"],
+        "body": [
+            "[newtexchangemaster]",
+            "${1:texture}",
+            "${2:variable}",
+            "",
+            "$0"
+        ],
+        "description": "Defines a new texture change in a cfg defined under a \"texchanges\" tag"
+    },
+    "Texture Change Entries": {
+        "prefix": ["entries", "[entries]"],
+        "body": [
+            "[entries]",
+            "${1:amount}",
+            "${2:image.bmp}",
+            "",
+            "$0"
+        ],
+        "description": "Defines a new texture change in a cfg defined under a \"texchanges\" tag"
     },
     "AIList group": {
         "prefix": ["aigroup_2", "[aigroup_2]"],
