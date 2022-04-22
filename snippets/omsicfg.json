@@ -240,6 +240,7 @@
     "Material allcolor": {
         "prefix": ["matl_allcolor", "[matl_allcolor]"],
         "body": [
+            "[matl_allcolor]",
             "${1:Diffuse (R)}",
             "${2:Diffuse (G)}",
             "${3:Diffuse (B)}",
