@@ -2,6 +2,12 @@
 
 All notable changes to the "language-omsi" extension will be documented in this file.
 
+## [1.3.0] - 2022-04-30
+New snippets and syntax highlighting by [jem-suu](https://github.com/jem-suu):
+
+- Add snippets and seperate syntax highlighting for System variables
+- Add new cfg snippets: `[usescripttexture]`, `[smoke]` and `[texchanges]`
+- Fix `[matl_allcolor]
 
 ## [1.2.0] - 2021-12-24
 New snippets and fixes by [zheka20012](https://github.com/zheka20012):

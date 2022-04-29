@@ -413,7 +413,7 @@
             "",
             "$0"
         ],
-        "description": "Defines a perticle effect within a vehicle (usually exhaust smoke)"
+        "description": "Defines a particle effect within a vehicle (usually exhaust smoke)"
     },
     "Use text texture": {
         "prefix": ["useTextTexture", "[useTextTexture]"],

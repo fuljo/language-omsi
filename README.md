@@ -28,6 +28,9 @@ No additional settings are provided.
 
 ## Release notes
 
+### 1.3.0
+New snippets and syntax highlighting (thanks to [jem-suu](https://github.com/jem-suu))
+
 ### 1.2.0
 Add new snippets and fix existing ones (thanks to [zheka20012](https://github.com/zheka20012))
 
